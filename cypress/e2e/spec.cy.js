@@ -1,5 +1,5 @@
 //many failed tests because of this
-//INNENTŐL NEM VÁLTOZTASSAD A KÓDOD
+//INNENTŐL JÓ
 Cypress.on('uncaught:exception', (err, runnable) => {
   if (err.message.includes('fb_api_track_info')) {
     return false;
@@ -20,7 +20,7 @@ describe('Butopea Website Tests', () => {
 
   it('should load and check products on next tab', () => {
     cy.get('.tab.active').click();
-//IDÁIG NE VÁLTOZTASSAD A KÓDOD
+//IDÁIG JÓ
 
     cy.get('.product-item', { timeout: 20000 }).should('be.visible').each((product) => {
       const title = product.find('.product-title').text();
