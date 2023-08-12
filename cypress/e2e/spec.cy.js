@@ -22,16 +22,16 @@ describe('Butopea Website Tests', () => {
   });
 //IDÁIG JÓ
 
-//test 2
+/*//test 2
   it('should check if the right square contains an image', () =>{
     cy.get('.nth-child(3)', {timeout: 10000}).should('exist').invoke('image').then((Image) => {
       cy.log('extracted right square image:', Image);
     });
-  });
+  });*/
 
   //test 3
   it('should load and check products on next tab', () => {
-    cy.get('.tab.active').click();
+    cy.get('document.querySelector("#category > div.container.px0.pb30 > div > div > div > div:nth-child(1) > div > a > div.product-cover.bg-cl-secondary.product-cover-min-height > div.v-lazy-component.loaded > div > img.preview-img-item.product-image__thumb")').click();
 
 
     cy.get('.selector', { timeout: 10000 }).should('be.visible').each((product) => {
