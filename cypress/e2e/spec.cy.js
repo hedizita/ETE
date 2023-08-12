@@ -24,10 +24,14 @@ describe('Butopea Website Tests', () => {
 
 //test 2
   it('should check if the right square contains an image', () => {
-    cy.get('.div :nth-child(3)').should('exist').find('img').should('be.visible').invoke('attr', 'src').then((imageSrc) => {
-      cy.log('Extracted right square image:', imageSrc);
-    });
+    cy.get('#home-content > div:nth-child(3) > div > div > div:nth-child(3) > div > a > div > div > img', { timeout: 10000 })
+      .should('exist')
+      .invoke('attr', 'src')
+      .then((imageSrc) => {
+        cy.log('Extracted right square image:', imageSrc);
+      });
   });
+
 //document.querySelector("#home-content > div:nth-child(3) > div > div > div:nth-child(3) > div > a > div > div > img")
 
   //test 3
