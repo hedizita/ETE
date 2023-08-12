@@ -34,7 +34,7 @@ describe('Butopea Website Tests', () => {
     cy.get('.tab.active').click();
 
 
-    cy.get('.product-item', { timeout: 10000 }).should('be.visible').each((product) => {
+    cy.get('.selector', { timeout: 10000 }).should('be.visible').each((product) => {
       const title = product.find('.product-title').text();
       const link = product.find('.product-link').attr('href');
       const imageSrc = product.find('.product-image img').attr('src');
