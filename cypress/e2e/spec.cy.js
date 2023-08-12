@@ -22,12 +22,13 @@ describe('Butopea Website Tests', () => {
   });
 //IDÁIG JÓ
 
-/*//test 2
-  it('should check if the right square contains an image', () =>{
-    cy.get('.nth-child(3)', {timeout: 10000}).should('exist').invoke('image').then((Image) => {
-      cy.log('extracted right square image:', Image);
+//test 2
+  it('should check if the right square contains an image', () => {
+    cy.get('.div :nth-child(3)').should('exist').find('img').should('be.visible').invoke('attr', 'src').then((imageSrc) => {
+      cy.log('Extracted right square image:', imageSrc);
     });
-  });*/
+  });
+//document.querySelector("#home-content > div:nth-child(3) > div > div > div:nth-child(3) > div > a > div > div > img")
 
   //test 3
   it('should load and check products on next tab', () => {
