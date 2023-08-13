@@ -54,7 +54,7 @@ describe('Butopea Website Tests', () => {
 
   it('should load and check products on next tab', () => {
     // Click on the desired element to load the next tab
-    cy.get("#home-tabs-wrapper > div").click();
+    cy.get("#new-arrivals > section > div > div > div:nth-child(4) > div > a > div.product-cover.bg-cl-secondary.product-cover-min-height > div.product-image.product-cover__thumb.original-thumbnail.product-image--height > img.preview-img-item.product-image__thumb").click();
   //
   //'#category > div.container.px0.pb30 > div > div > div > div:nth-child(1) > div > a'
     // Assuming .selector is the class that identifies the product items
