@@ -52,5 +52,5 @@ describe('Butopea Website Tests', () => {
       cy.log('Product Price:', price);
     });
   });
-  
+  console.log()
 });
